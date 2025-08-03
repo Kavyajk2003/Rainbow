@@ -54,7 +54,7 @@ export default function useColorScreen() {
           return updated;
         });
       } catch (err) {
-        console.warn('Failed to sync color:', err);
+        console.warn('Failed to sync color1:', err);
       } finally {
         setSyncing(false);
       }
