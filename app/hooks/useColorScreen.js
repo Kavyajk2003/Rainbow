@@ -82,7 +82,7 @@ export default function useColorScreen() {
           .then((results) => {
             const successfulSyncs = results
               .filter(result => result.status === 'fulfilled' && result.value.success)
-
+              .map(result => result.value.color);
             if (successfulSyncs.length > 0) {
               setColors(prevColors => {
                 const updated = prevColors.map(c =>
